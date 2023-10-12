@@ -26,9 +26,6 @@ mongoose
     console.log(err.message);
   });
 
-app.use("/", (req, res) => {
-  res.send("Hello World!!");
-});
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
