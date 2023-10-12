@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const authRoutes = require("./routes/auth");
 const messageRoutes = require("./routes/messages");
 const socket = require("socket.io");
+const bodyParser = require("body-parser");
 
 const app = express();
 const PORT=5000
@@ -11,7 +12,7 @@ const PORT=5000
 require("dotenv").config();
 
 app.use(cors());
-app.use(express.json());
+app.use(bodyParser.json());
 
 mongoose
   .connect(process.env.MONGO_ATLAS_URI, {
