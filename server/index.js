@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect(process.env.MONGO_ATLAS_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -31,7 +31,7 @@ const server = app.listen(process.env.PORT, () =>
 
 const io = socket(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "http://localhost:3000 || https://chat-app-client-svmshjn0y-saurabhon28.vercel.app/",
     credentials: true,
   },
 });
