@@ -7,7 +7,7 @@ const socket = require("socket.io");
 const bodyParser = require("body-parser");
 
 const app = express();
-const PORT=5000
+const PORT = 5000;
 
 require("dotenv").config();
 
@@ -26,12 +26,13 @@ mongoose
     console.log(err.message);
   });
 
+app.use("/", (req, res) => {
+  res.send("Hello World!!");
+});
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
-const server = app.listen(PORT, () =>
-  console.log(`Server started on ${PORT}`)
-);
+const server = app.listen(PORT, () => console.log(`Server started on ${PORT}`));
 
 const io = socket(server, {
   cors: {
