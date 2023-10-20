@@ -1,6 +1,6 @@
 # Chat-Sat - Chat Application 
-Chat-sat is chat application build with the power of MERN Stack. 
-
+Chat-sat is chat application build with the power of MERN Stack. Users can chat with your contacts anywhere in the world.
+![Alt text](screenshots/chat_dashboard.png)
 
 ## Installation Guide
 
@@ -46,3 +46,4 @@ npm start
 ```
 
 Done! Now open localhost:3000 in your browser.
+
