@@ -33,7 +33,7 @@ const server = app.listen(PORT, () => console.log(`Server started on ${PORT}`));
 
 const io = socket(server, {
   cors: {
-    origin: "https://chat-app-client-qgo3.onrender.com",
+    origin: "https://chat-app-client-qgo3.onrender.com" || "http://localhost:3000",
     credentials: true,
   },
 });

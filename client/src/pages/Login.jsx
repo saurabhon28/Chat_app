@@ -41,6 +41,7 @@ export default function Login() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    toast.loading("Loading...", toastOptions);
     if (validateForm()) {
       const { username, password } = values;
       const { data } = await axios.post(loginRoute, {
@@ -92,5 +93,3 @@ export default function Login() {
     </>
   );
 }
-
-
